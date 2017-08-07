@@ -65,7 +65,7 @@ public class ApiDvdController {
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	ResponseEntity<DvdDTO> getUser(@PathVariable Long id) {
+	ResponseEntity<DvdDTO> getDvd(@PathVariable Long id) {
 		Dvd dvd = dvdService.findOne(id);
 		if (dvd == null) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);

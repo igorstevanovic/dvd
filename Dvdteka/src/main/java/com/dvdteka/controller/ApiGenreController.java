@@ -41,7 +41,7 @@ public class ApiGenreController {
 	private DvdToDvdDTO d2dDTO;
 
 	@RequestMapping(method = RequestMethod.GET)
-	ResponseEntity<List<GenreDTO>> getTips() {
+	ResponseEntity<List<GenreDTO>> getGenre() {
 		List<Genre> genres;
 
 		genres = genreService.findAll();
@@ -50,7 +50,7 @@ public class ApiGenreController {
 	}
 
 	@RequestMapping(value = "/{id}/dvds", method = RequestMethod.GET)
-	ResponseEntity<List<DvdDTO>> getActivity(@PathVariable Long id) {
+	ResponseEntity<List<DvdDTO>> getGenres(@PathVariable Long id) {
 		Genre genre = genreService.findOne(id);
 		if (genre == null) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);

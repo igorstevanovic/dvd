@@ -58,10 +58,6 @@ dvdtekaApp.controller('dvdCtrl', function($scope, $http, $routeParams, $location
        
 });
 
-
-
-
-
 dvdtekaApp.controller('dvdsCtrl', function($scope, $http, $location){
     var newDvd;
     var selected;
